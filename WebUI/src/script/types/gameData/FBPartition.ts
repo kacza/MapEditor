@@ -59,7 +59,7 @@ export class FBPartition {
 			return this.promise;
 		}
 		this.promise = axios
-			.get('http://176.9.7.112:8081/' + this.name + '.json')
+			.get('http://127.0.0.1:8081/' + this.name + '.json')
 			.then((response: AxiosResponse<EBX.JSON.Partition>) => {
 				const data = Partition.fromJSON(this.name, response.data);
 				for (const instance of response.data.$instances) {
