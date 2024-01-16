@@ -13,7 +13,7 @@ export default class Partition {
 
 	static fromPath(path: string) {
 		return axios
-			.get('http://176.9.7.112:8081/' + this.name + '.json')
+			.get('http://127.0.0.1:8081/' + this.name + '.json')
 			.then((response: AxiosResponse<EBX.JSON.Partition>) => {
 				return this.fromJSON(path, response.data);
 			})
